@@ -1,0 +1,29 @@
+{
+  "name": "hw1",
+  "version": "1.0.0",
+  "description": "HOME WORK #1",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"It is test text message\"",
+    "start:myapp": "node app.js",
+    "start:dbg": "node --inspect-brk app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/newmexikanec/nodejs-hillel.git"
+  },
+  "keywords": [
+    "nodejs",
+    "hw",
+    "hillel"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/newmexikanec/nodejs-hillel/issues"
+  },
+  "homepage": "https://github.com/newmexikanec/nodejs-hillel#readme",
+  "dependencies": {
+    "chalk": "^4.1.2"
+  }
+}
