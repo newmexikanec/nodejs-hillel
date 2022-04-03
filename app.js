@@ -9,6 +9,7 @@ if (!args.target || !args.dirPath) {
     process.exit(1);
 }
 
+fileSeeker.emitter.setVerbose(args.verbose);
 fileSeeker.seek(args.target, args.dirPath);
 
 fileSeeker.emitter.addListener('fail', err => {

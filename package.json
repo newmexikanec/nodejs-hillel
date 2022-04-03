@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"It is test text message\"",
-    "start": "node app.js --targetd=logger.js --dirPath=./utils",
+    "start": "node app.js --target=logger.js --dirPath=./utils --verbose",
     "start:dbg": "node --inspect-brk app.js"
   },
   "repository": {
