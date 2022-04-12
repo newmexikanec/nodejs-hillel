@@ -1,8 +1,8 @@
-const fs = require('fs');
 const fsPromises = require('fs/promises');
 const path = require('path');
 const EventEmitter = require('events');
 const { warn, error } = require("./logger");
+const { log } = require('./fslogger');
 
 // Extended class of EventEmitter
 class ExtEventEmitter extends EventEmitter {
@@ -17,14 +17,8 @@ class ExtEventEmitter extends EventEmitter {
     }
 
     emit(event, ...data) {
-        this._verbose && this.fileEventsLog(event, ...data);
+        this._verbose && log( `[${new Date().toISOString()}][${event}] ${data}`);
         return super.emit(event, ...data);
-    }
-
-    fileEventsLog(event,...data) {
-        fs.writeFile('./events.log', `[${new Date().toISOString()}][${event}] ${data}\n`, {flag: 'a+'}, err => {
-            error(err);
-        });
     }
 }
 
