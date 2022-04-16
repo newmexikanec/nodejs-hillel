@@ -4,9 +4,11 @@
   "description": "HOME WORK #1",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"It is test text message\"",
-    "start": "node app.js --target=logger.js --dirPath=./utils --verbose",
-    "start:dbg": "node --inspect-brk app.js"
+    "start": "node server.js",
+    "start:dev": "nodemon --inspect server.js",
+    "start:dbg": "node --inspect-brk server.js",
+    "start:hw3": "node app.js --target=logger.js --dirPath=./utils --verbose",
+    "test": "echo \"It is test text message\""
   },
   "repository": {
     "type": "git",
@@ -25,6 +27,8 @@
   "homepage": "https://github.com/newmexikanec/nodejs-hillel#readme",
   "dependencies": {
     "chalk": "^4.1.2",
+    "express": "^4.17.3",
+    "serve-favicon": "^2.5.0",
     "yargs": "^17.3.1"
   },
   "devDependencies": {
